@@ -4,7 +4,6 @@ import java.util.ArrayList;
 
 import models.Employe;
 import models.Salarier;
-import models.Type;
 
 public class Service implements IService{
     ArrayList<models.Service> services = new ArrayList<>();
@@ -25,19 +24,19 @@ public class Service implements IService{
     }
 
     @Override
-    public void ajouterEmploye(Employe employe, models.Service service) {
-        if(employe.getType()==Type.Salarier){
-            ((Salarier)employe).setService(service);
-        }
-        employes.add(employe);
-        
+    public void ajouterEmploye(Employe employe) {
+        employes.add(employe);   
     }
 
 
     @Override
     public void listerEmployerMoinsPayeDeChaqueService() {
+        Salarier salarier;
         for (models.Service service : services) {
-            System.out.println(service.employeMoinsPayeDuService());
+            salarier= service.employeMoinsPayeDuService();
+            if(salarier!=null){
+                System.out.println(salarier);
+            }
         }
         
     }

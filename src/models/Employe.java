@@ -5,6 +5,11 @@ public abstract class Employe {
     protected String nom, prenom;
     protected Type type;
     private static int nbEmploye;
+    public Employe(String nom, String prenom) {
+        this.nom = nom;
+        this.prenom = prenom;
+        id=++nbEmploye;
+    }
     public Employe() {
         id=++nbEmploye;
     }

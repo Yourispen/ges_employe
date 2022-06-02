@@ -4,6 +4,14 @@ public class Salarier extends Employe{
     private double salaire, retenue, prime;
     private Service service;
 
+    public Salarier(String nom, String prenom, double salaire, double retenue, double prime) {
+        super(nom, prenom);
+        this.salaire = salaire;
+        this.retenue = retenue;
+        this.prime = prime;
+        type=Type.Salarier;
+    }
+
     public Salarier() {
         type=Type.Salarier;
     }

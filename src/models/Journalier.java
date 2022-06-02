@@ -4,6 +4,12 @@ public class Journalier extends Employe{
     private double prixJour, taxe;
     private int nbreHeure;
     public static final double PER=0.05;
+    public Journalier(String nom, String prenom, double prixJour, int nbreHeure) {
+        super(nom, prenom);
+        this.prixJour = prixJour;
+        this.nbreHeure = nbreHeure;
+        type=Type.Journalier;
+    }
     public Journalier() {
         type=Type.Journalier;
     }

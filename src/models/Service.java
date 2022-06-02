@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Service {
     private int id;
     private String libelle, adresse;
-    private int nbService;
+    private static int nbService;
     private ArrayList<Salarier> salariers =  new ArrayList<>();
 
     public Service() {
@@ -33,7 +33,7 @@ public class Service {
     }
     @Override
     public String toString() {
-        return "Service [adresse=" + adresse + ", id=" + id + ", libelle=" + libelle + ", nbService=" + nbService + "]";
+        return "Service [adresse=" + adresse + ", id=" + id + ", libelle=" + libelle +"]";
     }
     @Override
     public boolean equals(Object obj) {
